@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    android:layout_marginTop="@dimen/cardView_margin_top_bottom"
+    android:layout_marginEnd="@dimen/margin_left_top"
+    android:layout_marginStart="@dimen/margin_left_top"
+    android:layout_marginBottom="@dimen/cardView_margin_top_bottom">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/custom_purple">
+
+        <TextView
+            android:id="@+id/txvUniTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="University  -"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvUniName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toEndOf="@id/txvUniTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txvCountryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country  -"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvUniTitle" />
+
+        <TextView
+            android:id="@+id/txvCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="country"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toEndOf="@id/txvCountryTitle"
+            app:layout_constraintTop_toBottomOf="@id/txvUniTitle" />
+
+        <TextView
+            android:id="@+id/txvDomainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Domain  -"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvCountryTitle" />
+
+        <TextView
+            android:id="@+id/txvDomain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="domain"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toEndOf="@id/txvDomainTitle"
+            app:layout_constraintTop_toBottomOf="@id/txvCountry" />
+
+        <TextView
+            android:id="@+id/txvCodeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alpha code  -"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvDomainTitle" />
+
+        <TextView
+            android:id="@+id/txvAlphaCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="code"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toEndOf="@id/txvCodeTitle"
+            app:layout_constraintTop_toBottomOf="@id/txvDomain" />
+
+        <TextView
+            android:id="@+id/txvStateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State  -"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvCodeTitle" />
+
+        <TextView
+            android:id="@+id/txvState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="state"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toEndOf="@id/txvStateTitle"
+            app:layout_constraintTop_toBottomOf="@id/txvAlphaCode" />
+
+        <TextView
+            android:id="@+id/txvWebsiteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Website  -"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txvStateTitle" />
+
+        <TextView
+            android:id="@+id/txvWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Website"
+            android:textSize="@dimen/txv_textSize"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_left_top"
+            android:layout_marginLeft="@dimen/margin_left_top"
+            android:layout_marginBottom="@dimen/margin_left_top"
+            app:layout_constraintStart_toEndOf="@id/txvWebsiteTitle"
+            app:layout_constraintTop_toBottomOf="@id/txvState" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
