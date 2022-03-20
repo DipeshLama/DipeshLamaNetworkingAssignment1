@@ -18,7 +18,10 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         name.text = university.name
         domain.text = university.domains!![0]
         alphaCode.text = university.alphaTwoCode
-        state.text = university.stateProvince.toString()
+
+        if(university.stateProvince == null) {
+            state.text = "no data found"
+        }
         website.text = university.webPages!![0]
     }
 }
