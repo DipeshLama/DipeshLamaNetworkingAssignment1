@@ -4,6 +4,7 @@ import android.content.Context
 import android.widget.Toast
 import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.dipeshlamanetworkingassignment1.api.ServiceBuilder
+import com.example.dipeshlamanetworkingassignment1.api.UniversityApi
 import com.example.dipeshlamanetworkingassignment1.listener.SuccessOrFailureListener
 import com.example.dipeshlamanetworkingassignment1.model.University
 import com.example.dipeshlamanetworkingassignment1.repository.UniversityRepository
@@ -29,29 +30,38 @@ class MainPresenter () : MvpBasePresenter<MainView>() {
                 override fun onSubscribe(d: Disposable) {
                 }
 
-                override fun onSuccess(t: ArrayList<University>) {
-                    ifViewAttached { view ->
-                        view.universityList(t)
-                    }
+                override fun onSuccess(university: ArrayList<University>) {
+                    handleSuccess(university)
                 }
 
                 override fun onError(e: Throwable) {
-                    view.showError()
+                    handleFailure()
                 }
             })
     }
 
+
     fun getUniversityListWithRetrofit(){
         UniversityRepository().getUniversityUsingRetrofitOnly(object : SuccessOrFailureListener{
             override fun onSuccess(university: ArrayList<University>) {
-                ifViewAttached { view ->
-                    view.universityList(university)
-                }
+                handleSuccess(university)
             }
 
             override fun onFailure() {
-                view.showError()
+                handleFailure()
             }
         })
+    }
+
+    private fun handleSuccess (uni: ArrayList<University>){
+        ifViewAttached { view ->
+            view.universityList(uni)
+        }
+    }
+
+    private fun handleFailure (){
+        ifViewAttached { view ->
+            view.showError()
+        }
     }
 }

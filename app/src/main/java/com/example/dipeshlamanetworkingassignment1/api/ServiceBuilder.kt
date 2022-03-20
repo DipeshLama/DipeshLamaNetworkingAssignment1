@@ -1,5 +1,6 @@
 package com.example.dipeshlamanetworkingassignment1.api
 
+import com.example.dipeshlamanetworkingassignment1.Utils.ApiConstants
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import okhttp3.OkHttpClient
@@ -15,7 +16,7 @@ object ServiceBuilder {
     private val retrofit : Retrofit = Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create(gson))
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-        .baseUrl("http://universities.hipolabs.com/")
+        .baseUrl(ApiConstants.BASE_URL)
         .client(getOkHttpClient())
         .build()
 

@@ -19,7 +19,7 @@ class RetrofitActivity : MvpActivity<MainView,MainPresenter>(),MainView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_retrofit)
-        presenter.getUniversityListWithRetrofit()
+        getUniversityWithRetrofit()
     }
 
     override fun createPresenter(): MainPresenter {
@@ -42,5 +42,9 @@ class RetrofitActivity : MvpActivity<MainView,MainPresenter>(),MainView {
     override fun showError() {
 //        Snackbar.make(constraint_layout_retrofit, ErrorConstants.error, Snackbar.LENGTH_SHORT).show()
         Toast.makeText(this, ErrorConstants.error, Toast.LENGTH_LONG).show()
+    }
+
+    private fun getUniversityWithRetrofit(){
+        presenter.getUniversityListWithRetrofit()
     }
 }

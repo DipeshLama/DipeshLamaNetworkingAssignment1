@@ -17,7 +17,7 @@ class RxjavaActivity : MvpActivity<MainView,MainPresenter>(),MainView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rxjava)
-        presenter.getUniversityWithRx()
+        getUniversityWithRx()
     }
 
     override fun createPresenter(): MainPresenter {
@@ -37,5 +37,9 @@ class RxjavaActivity : MvpActivity<MainView,MainPresenter>(),MainView {
 
     override fun showError() {
         Snackbar.make(constraint_layout_rx, ErrorConstants.error,Snackbar.LENGTH_LONG).show()
+    }
+
+    private fun getUniversityWithRx (){
+        presenter.getUniversityWithRx()
     }
 }
