@@ -30,7 +30,7 @@ class UniversityRepository {
             }
 
             override fun onFailure(call: Call<ArrayList<University>>, t: Throwable) {
-
+                listener.onFailure()
             }
         })
     }
